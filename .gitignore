@@ -18,6 +18,10 @@ coverage
 typings
 dist
 *.metadata.js
+.vscode
+.vscode/*
+.github
+.github/*
 
 #################
 ## JetBrains
@@ -27,6 +31,7 @@ dist
 .settings
 .idea/*
 *.iml
+
 
 ############
 ## Windows
