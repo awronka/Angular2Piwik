@@ -2,7 +2,7 @@
   "name": "angular2piwik",
   "version" : "0.1.0-beta",
   "description": "a wrapper to access piwik inside your angular 2 app",
-  "homepage": "http://angulartics.github.io/",
+  "homepage": "https://github.com/awronka/Angular2Piwik",
   "author": "Alexius Wronka <alexiusmichael@gmail.com> (http://github.com/awronka)",
   "contributors": [
     "Adam Yost <swimmadude66@users.noreply.github.com> (https://github.com/swimmadude66)"
@@ -48,9 +48,10 @@
     "zone.js": "~0.7.4"
   },
   "bugs": {
-    "url": "http://github.com/angulartics/angulartics2/issues"
+    "url": "https://github.com/awronka/Angular2Piwik/issues"
   },
   "scripts": {
+    "prepublish" : "tsc",
     "rimraf": "rimraf",
     "lint": "tslint ./*.ts ./src/{,*/}*.ts",
     "test": "tsc && karma start",
@@ -74,15 +75,10 @@
     "angular",
     "analytics",
     "tracking",
-    "google analytics",
-    "google tag manager",
-    "woopra",
-    "splunk",
     "piwik",
     "page tracking",
     "event tracking",
-    "scroll tracking",
-    "inspectlet"
+    "scroll tracking"
   ],
   "license": "MIT",
   "engines": {
