@@ -8,10 +8,7 @@ Download directly from github and place the src files in your Angular 2 applicat
 
 ##npm install
 
-```
- npm install --save angular2piwik
-
-```
+```npm install --save angular2piwik```
 
 
 ### Adding Piwik into your application.
