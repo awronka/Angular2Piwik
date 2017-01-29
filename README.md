@@ -112,7 +112,7 @@ export class AppComponent {
 
 ## Contributing
 
-Please see the [CONTRIBUTING](https://github.com/angulartics/angulartics2/blob/master/.github/CONTRIBUTING.md) and [CODE_OF_CONDUCT](https://github.com/angulartics/angulartics2/blob/master/.github/CODE_OF_CONDUCT.md) files for guidelines.
+Please see the [CONTRIBUTING](https://github.com/awronka/Angular2Piwik/blob/master/.github/contribute.md) and [CODE_OF_CONDUCT](https://github.com/awronka/Angular2Piwik/blob/master/.github/codeOfConduct.md) files for guidelines.
 
 ## Original Source
 
