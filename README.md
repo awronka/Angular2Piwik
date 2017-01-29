@@ -2,12 +2,14 @@
 
 A small easy to use wrapper component for Piwik to work with your Angular 2 application.
 
-## Install
+## Install through source files
 
-Download directly from github and place the src files in your Angular 2 application.
+Download directly from github and place the src files in your Angular 2 application. 
 
-```ts
- 
+##npm install
+
+```
+ npm install --save angular2piwik
 
 ```
 
