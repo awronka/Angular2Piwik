@@ -24,9 +24,9 @@ export class UsePiwikTracker {
       }
     }
 
-   trackPageView() {
+   trackPageView(title?: string) {
     try {
-      _paq.push(['trackPageView']);
+      _paq.push(['trackPageView'], title);
       } catch (e) {
         if (!(e instanceof ReferenceError)) {
           throw e;
@@ -41,6 +41,27 @@ export class UsePiwikTracker {
         properties.value = isNaN(parsed) ? 0 : parsed;
       }
       _paq.push(['trackEvent', properties.category, action, properties.label, properties.value]);
+      } catch (e) {
+        if (!(e instanceof ReferenceError)) {
+          throw e;
+        }
+      }
+    }
+
+    trackSiteSearch(searchQuery: string, category: string, resultsCount: number){
+      try {
+      _paq.push(['trackSiteSearch'], searchQuery, category, resultsCount);
+      } catch (e) {
+        if (!(e instanceof ReferenceError)) {
+          throw e;
+        }
+      }
+    }
+
+
+    enableHeartBeatTimer(){
+      try {
+      _paq.push(['enableHeartBeatTimer']);
       } catch (e) {
         if (!(e instanceof ReferenceError)) {
           throw e;

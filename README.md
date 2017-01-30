@@ -33,6 +33,29 @@ Make sure you replace the PIWIK_URL with your piwik server. You can remove all t
 <!-- End Piwik Code -->
 ```
 
+### Initialize Piwik via Root Component 
+
+To enable Piwik via your root component you can now export InitializePiwik provider and inject it in your roop component.
+
+```ts
+  import { Component } from '@angular/core';
+  import { InitializePiwik } from 'Angular2Piwik';
+
+@Component({
+  selector: 'app',
+  template: `<router-outlet></router-outlet>` // Or what your root template is.
+})
+export class AppComponent {
+  constructor(
+    private initializePiwik: InitializePiwik
+    ) {
+      const url = `//*************:*****/anayltics/`; // set your url to whatever should be communicating with Piwik with the correct backslashes
+      initializePiwik.init(url);
+    }
+}
+
+```
+
 ## Include it in your application
 
 Bootrapping this application is easy. Import ```Angular2PiwikModule``` into your root ```NgModule```.

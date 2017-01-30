@@ -4,13 +4,13 @@ declare var _paq: any;
 @Injectable()
 export class ConfigurePiwikTracker {
 
-        constructor() {
+    constructor() {
         if (typeof (_paq) === 'undefined') {
           console.warn('Piwik not found');
         }
     }
 
-      pageCustomUrl(path: string) {
+      setCustomUrl(path: string) {
       try {
         _paq.push(['setCustomUrl', path]);
       } catch (e) {
@@ -41,9 +41,19 @@ export class ConfigurePiwikTracker {
         }
       }
 
-      setCustomVariable(properties: any) {
+      setCustomVariable(name: string, index: string, type: string) {
         try {
-          _paq.push(['setCustomVariable', properties.value, properties.other ]);
+          _paq.push(['setCustomVariable', index, name, type]);
+        } catch (e) {
+          if (!(e instanceof ReferenceError)) {
+            throw e;
+          }
+        }
+      }
+
+      setCustomDimension(index: string, value: string) {
+        try {
+          _paq.push(['setCustomDimension', index, value]);
         } catch (e) {
           if (!(e instanceof ReferenceError)) {
             throw e;
