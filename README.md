@@ -11,13 +11,13 @@ Download directly from github and place the src files in your Angular 2 applicat
 ```npm install --save angular2piwik```
 
 
-### Adding Piwik into your application.
+### Adding Piwik into your application via Script Tag.
 
 To illustrate the set up, here's the code to inject into your header to initialize Piwik in your application. Piwik's [site](https://developer.piwik.org/guides/tracking-javascript-guide) has the detailed documentation on how to set up communication between Piwik and your application. 
 Make sure you replace the PIWIK_URL with your piwik server. You can remove all the _paq methods in this script and set them up in your Angular 2 application. 
 
 ```html
-     <!-- Piwik -->
+<!-- Piwik -->
 <script type="text/javascript">
   var _paq = _paq || [];
   _paq.push(['trackPageView']);
@@ -38,8 +38,8 @@ Make sure you replace the PIWIK_URL with your piwik server. You can remove all t
 To enable Piwik via your root component you can now export InitializePiwik provider and inject it in your roop component.
 
 ```ts
-  import { Component } from '@angular/core';
-  import { InitializePiwik } from 'Angular2Piwik';
+import { Component } from '@angular/core';
+import { InitializePiwik } from 'Angular2Piwik';
 
 @Component({
   selector: 'app',
