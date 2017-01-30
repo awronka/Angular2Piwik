@@ -43,6 +43,7 @@ import { InitializePiwik } from 'Angular2Piwik';
 
 @Component({
   selector: 'app',
+  providers: [ initializePiwik ],
   template: `<router-outlet></router-outlet>` // Or what your root template is.
 })
 export class AppComponent {
