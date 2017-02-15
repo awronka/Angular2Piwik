@@ -41,6 +41,16 @@ export class ConfigurePiwikTracker {
         }
       }
 
+       setReferrerUrl(url: string) {
+        try {
+          _paq.push(['setReferrerUrl', url ]);
+        } catch (e) {
+          if (!(e instanceof ReferenceError)) {
+            throw e;
+          }
+        }
+      }
+
       setCustomVariable(name: string, index: string, type: string) {
         try {
           _paq.push(['setCustomVariable', index, name, type]);

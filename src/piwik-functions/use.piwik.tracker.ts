@@ -12,7 +12,7 @@ export class UsePiwikTracker {
 
     
    // left this function in as an apply all in your application
-    pageTrack(path: string, location: any) {
+  pageTrack(path: string, location: any) {
     try {
       _paq.push(['setDocumentTitle', window.document.title]);
       _paq.push(['setCustomUrl', path]);
@@ -24,9 +24,24 @@ export class UsePiwikTracker {
       }
     }
 
+  setPageAndTrack(path: string, title: string) {
+    try {
+      _paq.push(['setCustomUrl', path]);
+      _paq.push(['trackPageView', title]);
+      } catch (e) {
+        if (!(e instanceof ReferenceError)) {
+          throw e;
+        }
+      }
+    }
+
    trackPageView(title?: string) {
     try {
-      _paq.push(['trackPageView'], title);
+      if(title){
+        _paq.push(['trackPageView'], title);
+      } else {
+        _paq.push(['trackPageView']);
+      }
       } catch (e) {
         if (!(e instanceof ReferenceError)) {
           throw e;
