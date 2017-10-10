@@ -19,3 +19,9 @@ export class InitializePiwik {
         })();
     }
 }
+
+declare var window: {
+    [key:string]: any; // missing index defintion
+    prototype: Window;
+    new(): Window;
+}

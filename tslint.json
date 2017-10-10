@@ -29,6 +29,7 @@
     "no-eval": true,
     "no-inferrable-types": false,
     "no-shadowed-variable": true,
+    "no-unsafe-any": false,
     "no-string-literal": false,
     "no-unused-expression": true,
     "no-use-before-declare": true,
