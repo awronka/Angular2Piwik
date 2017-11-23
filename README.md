@@ -39,7 +39,7 @@ To enable Piwik via your root component you can now export InitializePiwik provi
 
 ```ts
 import { Component } from '@angular/core';
-import { InitializePiwik } from 'Angular2Piwik';
+import { InitializePiwik } from 'angular2piwik';
 
 @Component({
   selector: 'app',
@@ -64,7 +64,7 @@ Bootrapping this application is easy. Import ```Angular2PiwikModule``` into your
 ```ts
 // bootstrap
  import { NgModule } from '@angular/core';
-  import { Angular2PiwikModule } from 'Angular2Piwik';
+  import { Angular2PiwikModule } from 'angular2piwik';
 
   ////
   @NgModule({
@@ -78,7 +78,7 @@ Once that's done you can import ```ConfigurePiwikTracker``` and ```UsePiwikTrack
 
 // component
 import { Component } from '@angular/core';
-import { ConfigurePiwikTracker, UsePiwikTracker } from 'Angular2Piwik';
+import { ConfigurePiwikTracker, UsePiwikTracker } from 'angular2piwik';
 
 @Component({
   selector: 'app',
@@ -110,7 +110,7 @@ For now tracking events and actions is manual and is not injected into the html.
 ```ts
 // component
 import { Component } from '@angular/core';
-import { UsePiwikTracker } from 'Angular2Piwik';
+import { UsePiwikTracker } from 'angular2piwik';
 
 @Component({
   selector: 'app',
