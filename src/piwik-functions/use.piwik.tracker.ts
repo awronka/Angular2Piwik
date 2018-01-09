@@ -65,7 +65,7 @@ export class UsePiwikTracker {
 
     trackSiteSearch(searchQuery: string, category: string, resultsCount: number){
       try {
-      _paq.push(['trackSiteSearch'], searchQuery, category, resultsCount);
+      _paq.push(['trackSiteSearch', searchQuery, category, resultsCount]);
       } catch (e) {
         if (!(e instanceof ReferenceError)) {
           throw e;
