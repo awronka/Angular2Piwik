@@ -1,6 +1,6 @@
 {
   "name": "angular2piwik",
-  "version" : "0.1.5-beta",
+  "version" : "0.1.6-beta",
   "description": "a wrapper to access piwik inside your angular 2 app",
   "homepage": "https://github.com/awronka/Angular2Piwik",
   "author": "Alexius Wronka <alexiusmichael@gmail.com> (http://github.com/awronka)",
