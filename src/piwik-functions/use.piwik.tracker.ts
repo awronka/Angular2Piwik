@@ -38,7 +38,7 @@ export class UsePiwikTracker {
    trackPageView(title?: string) {
     try {
       if(title){
-        _paq.push(['trackPageView'], title);
+        _paq.push(['trackPageView', title]);
       } else {
         _paq.push(['trackPageView']);
       }
