@@ -51,7 +51,8 @@ export class AppComponent {
     private initializePiwik: InitializePiwik
     ) {
       const url = `//*************:*****/anayltics/`; // set your url to whatever should be communicating with Piwik with the correct backslashes
-      initializePiwik.init(url);
+      const id = 2; // Site Id
+      initializePiwik.init(url, id);
     }
 }
 
