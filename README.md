@@ -6,7 +6,7 @@ A small easy to use wrapper component for Piwik to work with your Angular 2 appl
 
 Download directly from github and place the src files in your Angular 2 application. 
 
-##npm install
+## npm install
 
 ```npm install --save angular2piwik```
 
@@ -49,11 +49,11 @@ import { InitializePiwik } from 'angular2piwik';
 export class AppComponent {
   constructor(
     private initializePiwik: InitializePiwik
-    ) {
-      const url = `//*************:*****/anayltics/`; // set your url to whatever should be communicating with Piwik with the correct backslashes
-      const id = 2; // Site Id
-      initializePiwik.init(url, id);
-    }
+  ) {
+    const url = `//*************:*****/anayltics/`; // set your url to whatever should be communicating with Piwik with the correct backslashes
+    const id = 2; // Site Id
+    initializePiwik.init(url, id);
+  }
 }
 
 ```
@@ -64,13 +64,13 @@ Bootrapping this application is easy. Import ```Angular2PiwikModule``` into your
 
 ```ts
 // bootstrap
- import { NgModule } from '@angular/core';
-  import { Angular2PiwikModule } from 'angular2piwik';
+import { NgModule } from '@angular/core';
+import { Angular2PiwikModule } from 'angular2piwik';
 
-  ////
-  @NgModule({
-    imports :[ Angular2PiwikModule ]
-  })
+////
+@NgModule({
+  imports :[ Angular2PiwikModule ]
+})
 ```
 
 Once that's done you can import ```ConfigurePiwikTracker``` and ```UsePiwikTracker``` into any component in your application. Always use the configure piwik tracker methods before the use piwik tracker.
@@ -87,13 +87,13 @@ import { ConfigurePiwikTracker, UsePiwikTracker } from 'angular2piwik';
 })
 export class AppComponent {
   constructor(
-    private configurePiwikTracker: ConfigurePiwikTracker
+    private configurePiwikTracker: ConfigurePiwikTracker,
     private usePiwikTracker: UsePiwikTracker
-    ) {
-      configurePiwikTracker.setUserId('test-123');
-      configurePiwikTracker.setDocumentTitle();
-      usePiwikTracker.trackPageView();
-    }
+  ) {
+    configurePiwikTracker.setUserId('test-123');
+    configurePiwikTracker.setDocumentTitle();
+    usePiwikTracker.trackPageView();
+  }
 }
 
 
@@ -120,15 +120,14 @@ import { UsePiwikTracker } from 'angular2piwik';
 export class AppComponent {
   constructor(
     private usePiwikTracker: UsePiwikTracker
-    ) {
-    }
+  ) { }
 
-    whatHappensOnClick(someVal){
-      /*
-      * some code...
-      */
-      usePiwikTracker.trackEvent('clickEvent', {category : 'myClickEvents', label: 'generalClicks', value: someVal})
-    }
+  whatHappensOnClick(someVal) {
+    /*
+    * some code...
+    */
+    usePiwikTracker.trackEvent('clickEvent', {category : 'myClickEvents', label: 'generalClicks', value: someVal});
+  }
   
 }
 ```
